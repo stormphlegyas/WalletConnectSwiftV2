@@ -3,6 +3,7 @@ import UIKit
 import WalletConnectSign
 import WalletConnectUtils
 
+@available(iOS 13.0, *)
 class AccountRequestViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     private let session: Session
     private let chainId: String

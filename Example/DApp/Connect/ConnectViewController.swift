@@ -2,6 +2,7 @@ import Foundation
 import UIKit
 import WalletConnectSign
 
+@available(iOS 13.0, *)
 class ConnectViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     let uriString: String
     let activePairings: [Pairing] = Sign.instance.getSettledPairings()

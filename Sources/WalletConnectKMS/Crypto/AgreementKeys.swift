@@ -1,5 +1,6 @@
 import Foundation
 
+@available(iOS 13.0, *)
 public struct AgreementKeys: Equatable {
 
     public let sharedKey: SymmetricKey
@@ -10,6 +11,7 @@ public struct AgreementKeys: Equatable {
     }
 }
 
+@available(iOS 13.0, *)
 extension AgreementKeys: GenericPasswordConvertible {
     enum Error: Swift.Error {
         case invalidBufferLenght

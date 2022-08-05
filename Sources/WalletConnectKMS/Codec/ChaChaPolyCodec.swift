@@ -3,16 +3,19 @@
 import Foundation
 import CryptoKit
 
+@available(iOS 13.0, *)
 protocol Codec {
     func encode(plaintext: String, symmetricKey: Data, nonce: ChaChaPoly.Nonce) throws -> Data
     func decode(sealbox: Data, symmetricKey: Data) throws -> Data
 }
+@available(iOS 13.0, *)
 extension Codec {
     func encode(plaintext: String, symmetricKey: Data, nonce: ChaChaPoly.Nonce = ChaChaPoly.Nonce()) throws -> Data {
         try encode(plaintext: plaintext, symmetricKey: symmetricKey, nonce: nonce)
     }
 }
 
+@available(iOS 13.0, *)
 class ChaChaPolyCodec: Codec {
     enum Errors: Error {
         case stringToDataFailed(String)

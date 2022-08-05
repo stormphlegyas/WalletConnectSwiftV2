@@ -19,6 +19,7 @@ import UIKit
 /// - Parameters:
 ///     - delegate: The object that acts as the delegate of WalletConnect Client
 ///     - logger: An object for logging messages
+@available(iOS 13.0, *)
 public final class SignClient {
     public weak var delegate: SignClientDelegate?
 

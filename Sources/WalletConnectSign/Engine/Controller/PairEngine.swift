@@ -2,6 +2,7 @@ import Foundation
 import WalletConnectKMS
 import WalletConnectPairing
 
+@available(iOS 13.0.0, *)
 actor PairEngine {
     private let networkingInteractor: NetworkInteracting
     private let kms: KeyManagementServiceProtocol

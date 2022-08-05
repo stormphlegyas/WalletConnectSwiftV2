@@ -7,6 +7,7 @@ protocol NetworkMonitoring {
     func startMonitoring()
 }
 
+@available(iOS 12.0, *)
 class NetworkMonitor: NetworkMonitoring {
     var onSatisfied: (() -> Void)?
     var onUnsatisfied: (() -> Void)?

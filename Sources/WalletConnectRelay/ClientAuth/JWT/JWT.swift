@@ -1,5 +1,6 @@
 import Foundation
 
+@available(iOS 13.0, *)
 struct JWT: Codable, Equatable {
     enum Errors: Error {
         case jwtNotSigned

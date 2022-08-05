@@ -5,6 +5,7 @@ protocol SocketAuthenticating {
     func createAuthToken() throws -> String
 }
 
+@available(iOS 13.0, *)
 struct SocketAuthenticator: SocketAuthenticating {
     private let clientIdStorage: ClientIdStoring
     private let didKeyFactory: DIDKeyFactory

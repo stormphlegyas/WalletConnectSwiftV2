@@ -8,6 +8,7 @@ struct Chain {
     let id: String
 }
 
+@available(iOS 13.0, *)
 class SelectChainViewController: UIViewController, UITableViewDataSource {
     private let selectChainView: SelectChainView = {
         SelectChainView()

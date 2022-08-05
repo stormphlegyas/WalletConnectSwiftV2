@@ -7,6 +7,7 @@ public protocol KeychainStorageProtocol {
     func deleteAll() throws
 }
 
+@available(iOS 13.0, *)
 public final class KeychainStorage: KeychainStorageProtocol {
 
     private let service: String

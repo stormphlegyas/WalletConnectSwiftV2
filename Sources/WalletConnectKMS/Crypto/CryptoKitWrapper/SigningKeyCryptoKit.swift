@@ -3,12 +3,14 @@ import CryptoKit
 
 // MARK: - CryptoKit extensions
 
+@available(iOS 13.0, *)
 extension Curve25519.Signing.PublicKey: Equatable {
     public static func == (lhs: Curve25519.Signing.PublicKey, rhs: Curve25519.Signing.PublicKey) -> Bool {
         lhs.rawRepresentation == rhs.rawRepresentation
     }
 }
 
+@available(iOS 13.0, *)
 extension Curve25519.Signing.PrivateKey: Equatable {
     public static func == (lhs: Curve25519.Signing.PrivateKey, rhs: Curve25519.Signing.PrivateKey) -> Bool {
         lhs.rawRepresentation == rhs.rawRepresentation
@@ -16,7 +18,7 @@ extension Curve25519.Signing.PrivateKey: Equatable {
 }
 
 // MARK: - Public Key
-
+@available(iOS 13.0, *)
 public struct SigningPublicKey: GenericPasswordConvertible, Equatable {
     public init<D>(rawRepresentation data: D) throws where D: ContiguousBytes {
         self.key = try Curve25519.Signing.PublicKey(rawRepresentation: data)
@@ -42,6 +44,7 @@ public struct SigningPublicKey: GenericPasswordConvertible, Equatable {
     }
 }
 
+@available(iOS 13.0, *)
 extension SigningPublicKey: Codable {
 
     public func encode(to encoder: Encoder) throws {
@@ -56,6 +59,7 @@ extension SigningPublicKey: Codable {
     }
 }
 
+@available(iOS 13.0, *)
 public struct SigningPrivateKey: GenericPasswordConvertible, Equatable {
 
     private let key: Curve25519.Signing.PrivateKey

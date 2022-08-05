@@ -9,6 +9,7 @@ public enum SocketConnectionStatus {
     case disconnected
 }
 
+@available(iOS 13.0, *)
 public final class RelayClient {
 
     enum Errors: Error {

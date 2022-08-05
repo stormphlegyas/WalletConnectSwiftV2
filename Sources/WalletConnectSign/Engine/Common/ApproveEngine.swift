@@ -4,6 +4,7 @@ import WalletConnectUtils
 import WalletConnectKMS
 import WalletConnectPairing
 
+@available(iOS 13.0, *)
 final class ApproveEngine {
     enum Errors: Error {
         case wrongRequestParams
@@ -146,7 +147,7 @@ final class ApproveEngine {
 }
 
 // MARK: - Privates
-
+@available(iOS 13.0, *)
 private extension ApproveEngine {
 
     func setupNetworkingSubscriptions() {

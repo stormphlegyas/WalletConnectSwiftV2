@@ -1,6 +1,7 @@
 import Foundation
 import WalletConnectUtils
 
+@available(iOS 13.0, *)
 public protocol WCPairingStorage: AnyObject {
     var onPairingExpiration: ((WCPairing) -> Void)? { get set }
     func hasPairing(forTopic topic: String) -> Bool
@@ -11,6 +12,7 @@ public protocol WCPairingStorage: AnyObject {
     func deleteAll()
 }
 
+@available(iOS 13.0, *)
 public final class PairingStorage: WCPairingStorage {
 
     public var onPairingExpiration: ((WCPairing) -> Void)? {

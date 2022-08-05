@@ -4,6 +4,7 @@ import WalletConnectUtils
 import WalletConnectKMS
 import WalletConnectPairing
 
+@available(iOS 13.0, *)
 public struct SignClientFactory {
 
     /// Initializes and returns newly created WalletConnect Client Instance

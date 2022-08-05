@@ -5,9 +5,9 @@ import PackageDescription
 let package = Package(
     name: "WalletConnect",
     platforms: [
-        .iOS(.v13),
+        .iOS(.v11),
         .macOS(.v10_15),
-        .tvOS(.v13)
+        .tvOS(.v11)
     ],
     products: [
         .library(

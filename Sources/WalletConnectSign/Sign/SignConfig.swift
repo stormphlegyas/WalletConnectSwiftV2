@@ -1,6 +1,7 @@
 import Foundation
 import WalletConnectRelay
 
+@available(iOS 13.0, *)
 public extension Sign {
     struct Config {
         let metadata: AppMetadata

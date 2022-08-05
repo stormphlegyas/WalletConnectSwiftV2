@@ -6,6 +6,7 @@ protocol JWTSigning {
     func sign(header: String, claims: String) throws -> String
 }
 
+@available(iOS 13.0, *)
 struct EdDSASigner: JWTSigning {
     enum Errors: Error {
         case invalidJWTString

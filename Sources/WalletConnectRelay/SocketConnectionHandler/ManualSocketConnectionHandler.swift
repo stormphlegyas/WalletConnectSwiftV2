@@ -1,5 +1,6 @@
 import Foundation
 
+@available(iOS 13.0, *)
 class ManualSocketConnectionHandler: SocketConnectionHandler {
     var socket: WebSocketConnecting
 

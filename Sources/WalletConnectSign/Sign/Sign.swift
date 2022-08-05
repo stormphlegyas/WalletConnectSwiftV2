@@ -6,6 +6,7 @@ import Combine
 public typealias Account = WalletConnectUtils.Account
 public typealias Blockchain = WalletConnectUtils.Blockchain
 
+@available(iOS 13.0, *)
 public class Sign {
     public static let instance = Sign()
 
@@ -95,6 +96,7 @@ public class Sign {
     }
 }
 
+@available(iOS 13.0, *)
 extension Sign: SignClientDelegate {
 
     public func didReceive(sessionProposal: Session.Proposal) {
@@ -138,6 +140,7 @@ extension Sign: SignClientDelegate {
     }
 }
 
+@available(iOS 13.0, *)
 extension Sign {
 
     /// For the Proposer to propose a session to a responder.

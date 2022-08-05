@@ -1,6 +1,7 @@
 import Foundation
 import WalletConnectUtils
 
+@available(iOS 13.0, *)
 public struct WCPairing: SequenceObject {
     enum Errors: Error {
         case invalidUpdateExpiryValue
