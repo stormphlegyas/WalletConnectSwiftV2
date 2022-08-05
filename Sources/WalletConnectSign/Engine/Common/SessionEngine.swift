@@ -3,6 +3,7 @@ import Combine
 import WalletConnectUtils
 import WalletConnectKMS
 
+@available(iOS 13.0, *)
 final class SessionEngine {
     enum Errors: Error {
         case respondError(payload: WCRequestSubscriptionPayload, reason: ReasonCode)
@@ -104,7 +105,7 @@ final class SessionEngine {
 }
 
 // MARK: - Privates
-
+@available(iOS 13.0, *)
 private extension SessionEngine {
 
     func setupNetworkingSubscriptions() {

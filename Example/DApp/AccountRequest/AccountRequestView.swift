@@ -1,6 +1,7 @@
 import UIKit
 import Foundation
 
+@available(iOS 13.0, *)
 class AccountRequestView: UIView {
     let iconView: UIImageView = {
         let imageView = UIImageView()

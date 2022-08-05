@@ -1,6 +1,7 @@
 import Foundation
 import WalletConnectUtils
 
+@available(iOS 13.0, *)
 public class Serializer: Serializing {
     enum Errors: String, Error {
         case symmetricKeyForTopicNotFound

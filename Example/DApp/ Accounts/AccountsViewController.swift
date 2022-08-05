@@ -7,6 +7,7 @@ struct AccountDetails {
     let account: String
 }
 
+@available(iOS 13.0, *)
 final class AccountsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     let session: Session

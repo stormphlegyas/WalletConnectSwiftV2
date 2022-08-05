@@ -10,6 +10,7 @@ struct KeychainError: Error {
     }
 }
 
+@available(iOS 11.3, *)
 extension KeychainError: CustomStringConvertible {
 
     var description: String {
@@ -17,6 +18,7 @@ extension KeychainError: CustomStringConvertible {
     }
 }
 
+@available(iOS 11.3, *)
 extension OSStatus {
     /// A human readable message for the status.
     var message: String {

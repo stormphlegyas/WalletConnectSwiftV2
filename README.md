@@ -5,7 +5,7 @@
 
 Swift implementation of WalletConnect v.2 protocol for native iOS applications.
 ## Requirements 
-- iOS 13
+- iOS 11
 - XCode 13
 - Swift 5
 

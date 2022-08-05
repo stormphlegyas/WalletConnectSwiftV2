@@ -1,6 +1,7 @@
 import Foundation
 import CryptoKit
 
+@available(iOS 13.0, *)
 public struct SymmetricKey: Equatable {
 
     private let key: CryptoKit.SymmetricKey
@@ -27,6 +28,7 @@ public struct SymmetricKey: Equatable {
 
 }
 
+@available(iOS 13.0, *)
 extension SymmetricKey: GenericPasswordConvertible {
 
     public var rawRepresentation: Data {
@@ -38,6 +40,7 @@ extension SymmetricKey: GenericPasswordConvertible {
     }
 }
 
+@available(iOS 13.0, *)
 extension SymmetricKey {
     public enum Size {
         case bits256

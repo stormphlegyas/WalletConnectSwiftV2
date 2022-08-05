@@ -3,12 +3,14 @@ import CryptoKit
 
 // MARK: - CryptoKit extensions
 
+@available(iOS 13.0, *)
 extension Curve25519.KeyAgreement.PublicKey: Equatable {
     public static func == (lhs: Curve25519.KeyAgreement.PublicKey, rhs: Curve25519.KeyAgreement.PublicKey) -> Bool {
         lhs.rawRepresentation == rhs.rawRepresentation
     }
 }
 
+@available(iOS 13.0, *)
 extension Curve25519.KeyAgreement.PrivateKey: Equatable {
     public static func == (lhs: Curve25519.KeyAgreement.PrivateKey, rhs: Curve25519.KeyAgreement.PrivateKey) -> Bool {
         lhs.rawRepresentation == rhs.rawRepresentation
@@ -16,7 +18,7 @@ extension Curve25519.KeyAgreement.PrivateKey: Equatable {
 }
 
 // MARK: - Public Key
-
+@available(iOS 13.0, *)
 public struct AgreementPublicKey: GenericPasswordConvertible, Equatable {
 
     fileprivate let key: Curve25519.KeyAgreement.PublicKey
@@ -43,6 +45,7 @@ public struct AgreementPublicKey: GenericPasswordConvertible, Equatable {
     }
 }
 
+@available(iOS 13.0, *)
 extension AgreementPublicKey: Codable {
 
     public func encode(to encoder: Encoder) throws {
@@ -58,7 +61,7 @@ extension AgreementPublicKey: Codable {
 }
 
 // MARK: - Private Key
-
+@available(iOS 13.0, *)
 public struct AgreementPrivateKey: GenericPasswordConvertible, Equatable {
 
     private let key: Curve25519.KeyAgreement.PrivateKey

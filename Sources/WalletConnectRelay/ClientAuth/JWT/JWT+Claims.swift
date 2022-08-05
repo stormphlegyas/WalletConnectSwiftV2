@@ -1,5 +1,6 @@
 import Foundation
 
+@available(iOS 13.0, *)
 extension JWT {
     struct Claims: Codable, Equatable {
         let iss: String

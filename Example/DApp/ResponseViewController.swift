@@ -2,6 +2,7 @@ import Foundation
 import WalletConnectSign
 import UIKit
 
+@available(iOS 13.0, *)
 class ResponseViewController: UIViewController {
     let response: Response
     private let responseView = {
@@ -40,6 +41,7 @@ class ResponseViewController: UIViewController {
     }
 }
 
+@available(iOS 13.0, *)
 final class ResponseView: UIView {
 
     let nameLabel: UILabel = {

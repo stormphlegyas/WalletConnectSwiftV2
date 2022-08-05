@@ -3,6 +3,7 @@ import WalletConnectUtils
 import WalletConnectKMS
 import Combine
 
+@available(iOS 13.0, *)
 final class ControllerSessionStateMachine {
 
     var onNamespacesUpdate: ((String, [String: SessionNamespace]) -> Void)?

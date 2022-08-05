@@ -1,6 +1,7 @@
 import Foundation
 import CryptoKit
 
+@available(iOS 13.0, *)
 struct SharedSecret {
     private var sharedSecret: CryptoKit.SharedSecret
     var rawRepresentation: Data {

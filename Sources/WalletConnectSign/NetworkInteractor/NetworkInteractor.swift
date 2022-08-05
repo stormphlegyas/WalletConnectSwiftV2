@@ -3,6 +3,7 @@ import Combine
 import WalletConnectUtils
 import WalletConnectKMS
 
+@available(iOS 13.0, *)
 protocol NetworkInteracting: AnyObject {
     var transportConnectionPublisher: AnyPublisher<Void, Never> {get}
     var wcRequestPublisher: AnyPublisher<WCRequestSubscriptionPayload, Never> {get}
@@ -21,12 +22,14 @@ protocol NetworkInteracting: AnyObject {
     func unsubscribe(topic: String)
 }
 
+@available(iOS 13.0, *)
 extension NetworkInteracting {
     func request(_ wcMethod: WCMethod, onTopic topic: String) {
         requestPeerResponse(wcMethod, onTopic: topic, completion: nil)
     }
 }
 
+@available(iOS 13.0, *)
 class NetworkInteractor: NetworkInteracting {
 
     private var publishers = [AnyCancellable]()

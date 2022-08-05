@@ -1,7 +1,9 @@
 import Foundation
 import WalletConnectKMS
 import WalletConnectUtils
+import WalletConnectPairing
 
+@available(iOS 13.0, *)
 final class CleanupService {
 
     private let pairingStore: WCPairingStorage

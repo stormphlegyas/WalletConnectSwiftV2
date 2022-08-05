@@ -1,5 +1,6 @@
 import Foundation
 
+@available(iOS 13.0, *)
 public protocol KeyManagementServiceProtocol {
     func createX25519KeyPair() throws -> AgreementPublicKey
     func createSymmetricKey(_ topic: String) throws -> SymmetricKey
@@ -19,6 +20,7 @@ public protocol KeyManagementServiceProtocol {
     func performKeyAgreement(selfPublicKey: AgreementPublicKey, peerPublicKey hexRepresentation: String) throws -> AgreementKeys
 }
 
+@available(iOS 13.0, *)
 public class KeyManagementService: KeyManagementServiceProtocol {
     enum Error: Swift.Error {
         case keyNotFound

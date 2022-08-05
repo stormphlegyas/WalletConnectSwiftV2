@@ -1,6 +1,7 @@
 import Foundation
 import WalletConnectUtils
 
+@available(iOS 13.0, *)
 protocol Dispatching {
     var onConnect: (() -> Void)? {get set}
     var onDisconnect: (() -> Void)? {get set}
@@ -11,6 +12,7 @@ protocol Dispatching {
     func disconnect(closeCode: URLSessionWebSocketTask.CloseCode) throws
 }
 
+@available(iOS 13.0, *)
 final class Dispatcher: NSObject, Dispatching {
     var onConnect: (() -> Void)?
     var onDisconnect: (() -> Void)?

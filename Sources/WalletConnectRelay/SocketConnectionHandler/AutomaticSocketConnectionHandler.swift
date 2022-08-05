@@ -4,6 +4,7 @@ import UIKit
 import Foundation
 import Combine
 
+@available(iOS 13.0, *)
 class AutomaticSocketConnectionHandler: SocketConnectionHandler {
     enum Error: Swift.Error {
         case manualSocketConnectionForbidden

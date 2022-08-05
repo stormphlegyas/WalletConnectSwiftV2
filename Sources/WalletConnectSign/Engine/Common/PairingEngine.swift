@@ -1,8 +1,10 @@
 import Foundation
 import Combine
+import WalletConnectPairing
 import WalletConnectUtils
 import WalletConnectKMS
 
+@available(iOS 13.0, *)
 final class PairingEngine {
 
     private let networkingInteractor: NetworkInteracting
@@ -98,6 +100,7 @@ final class PairingEngine {
 
 // MARK: Private
 
+@available(iOS 13.0, *)
 private extension PairingEngine {
 
     func setupNetworkingSubscriptions() {

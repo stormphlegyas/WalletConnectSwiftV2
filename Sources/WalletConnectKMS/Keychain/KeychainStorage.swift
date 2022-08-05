@@ -7,6 +7,7 @@ public protocol KeychainStorageProtocol {
     func deleteAll() throws
 }
 
+@available(iOS 13.0, *)
 public final class KeychainStorage: KeychainStorageProtocol {
 
     private let service: String
@@ -27,6 +28,10 @@ public final class KeychainStorage: KeychainStorageProtocol {
         query[kSecValueData] = data
 
         let status = secItem.add(query as CFDictionary, nil)
+
+        guard status != errSecDuplicateItem else {
+            return try update(data: data, forKey: key)
+        }
 
         guard status == errSecSuccess else {
             throw KeychainError(status)

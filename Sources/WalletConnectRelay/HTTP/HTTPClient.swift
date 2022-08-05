@@ -1,5 +1,6 @@
 import Foundation
 
+@available(iOS 13.0.0, *)
 public actor HTTPClient {
 
     let host: String
